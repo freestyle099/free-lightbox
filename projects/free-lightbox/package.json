@@ -1,0 +1,26 @@
+{
+  "name": "free-lightbox",
+  "version": "0.0.1",
+  "main": "free-lightbox",
+  "description": "A lightweight lightbox library for Angular projects",
+  "author": "Józef Rzadkosz",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freestyle099/free-lightbox"
+  },
+  "keywords": [
+    "angular",
+    "lightbox",
+    "image gallery",
+    "free-lightbox"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^19.0.0",
+    "@angular/core": "^19.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}
