@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/free-lightbox",
       "sourceRoot": "projects/free-lightbox/src",
-      "prefix": "lib",
+      "prefix": "free",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
@@ -28,14 +28,10 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "tsConfig": "projects/free-lightbox/tsconfig.spec.json",
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ]
+            "polyfills": ["zone.js", "zone.js/testing"]
           }
         }
       }
     }
   }
 }
-

@@ -1,0 +1,35 @@
+@if (isOpen()) {
+  <div class="free-lightbox" (click)="onBackdropClick()">
+    <button
+      class="free-lightbox__button free-lightbox__button--prev"
+      (click)="previousImage($event)"
+    >
+      <
+    </button>
+    <button
+      class="free-lightbox__button free-lightbox__button--next"
+      (click)="nextImage($event)"
+    >
+      >
+    </button>
+
+    <div class="free-lightbox__images">
+      @for (image of images(); track image) {
+        <img
+          (click)="doNothing($event)"
+          class="free-lightbox__image"
+          [alt]="images().indexOf(image)"
+          [src]="image"
+          [ngClass]="{
+            'free-lightbox__image--current':
+              activeIndex() === images().indexOf(image),
+            'free-lightbox__image--prev':
+              activeIndex() === images().indexOf(image) - 1,
+            'free-lightbox__image--next':
+              activeIndex() === images().indexOf(image) + 1,
+          }"
+        />
+      }
+    </div>
+  </div>
+}
